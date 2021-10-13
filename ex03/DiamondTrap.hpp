@@ -6,17 +6,15 @@
 
 class DiamondTrap : public FragTrap, public ScavTrap
 {
-    /*
-    private:
-        ClapTrap::name;
-    public:
-        Name (Parameter of constructor);
-        Claptrap::Name (Parameter of constructor + "_clap_name");
-        Hitpoints (Fragtrap);
-        Energy points (Scavtrap);
-        Attack damage (Fragtrap);
-        attack (Scavtrap);
-    */
+	public:
+		DiamondTrap();
+		DiamondTrap(const DiamondTrap& cpyCP);
+		DiamondTrap(std::string const name);
+		~DiamondTrap();
+		DiamondTrap& operator=(const DiamondTrap& cpyCP);
+		void whoAmI();
+	private:
+		std::string name;
 };
 
 #endif
